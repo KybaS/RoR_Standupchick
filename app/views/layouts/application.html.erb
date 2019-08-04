@@ -4,25 +4,13 @@
   <title><%= full_title(yield(:title)) %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= render 'layouts/shim' %>
 </head>
+
 <body>
 <%= render 'layouts/header' %>
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "Stand-upchick app", standup_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-
-        <li><%= link_to "Log in", signup_path %></li>
-        <li><%= link_to "Employees",  employees_path %></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 <div class="container">
 
   <% flash.each do |message_type, message| %>
